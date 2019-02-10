@@ -1,11 +1,7 @@
-// const express = require('express')
-// const mongoose = require('mongoose')
-// const bodyParser = require('body-parser')
-// const passport = require('passport')
-import express from 'express'
-import mongoose from 'mongoose'
-import bodyParser from 'body-parser'
-import passport from 'passport'
+const express = require('express')
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+const passport = require('passport')
 
 // Routes
 const users = require('./routes/api/users')

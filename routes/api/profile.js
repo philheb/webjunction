@@ -1,5 +1,4 @@
-// const express = require('express')
-import express from 'express'
+const express = require('express')
 const router = express.Router()
 
 // #Route   GET api/profile/test

@@ -1,21 +1,14 @@
-// const express = require('express')
-// const router = express.Router()
-// const gravatar = require('gravatar')
-// const bcrypt = require('bcryptjs')
-// const jwt = require('jsonwebtoken')
-// const keys = require('../../config/keys')
-// const passport = require('passport')
-
-import express from 'express'
-import gravatar from 'gravatar'
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
-import keys from '../../config/keys'
-import passport from 'passport'
+const express = require('express')
 const router = express.Router()
+const gravatar = require('gravatar')
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+const keys = require('../../config/keys')
+const passport = require('passport')
 
 //Load input validation
 const validateRegisterInput = require('../../validation/register')
+const validateLoginInput = require('../../validation/login')
 
 //Import User model
 const User = require('../../models/User')
@@ -71,13 +64,20 @@ router.post('/register', (req, res) => {
 // #Desc    Login User / Returning JWT Token
 // #Access  Public
 router.post('/login', (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body)
+
+  if (!isValid) {
+    return res.status(400).json(errors)
+  }
+
   const email = req.body.email
   const password = req.body.password
   //Find user by email
   User.findOne({ email }).then(user => {
     // Check for user
     if (!user) {
-      return res.status(404).json({ email: 'User not found' })
+      errors.email = 'User not found'
+      return res.status(404).json(errors)
     }
     //Check password
     bcrypt.compare(password, user.password).then(isMatch => {
@@ -102,7 +102,8 @@ router.post('/login', (req, res) => {
           }
         )
       } else {
-        return res.status(400).json({ password: 'Password incorrect' })
+        errors.password = 'Password is incorrect'
+        return res.status(400).json(errors)
       }
     })
   })

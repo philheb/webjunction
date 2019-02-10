@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "babel-node server.js",
-    "server": "nodemon --exec babel-node server.js"
+    "server": "nodemon server.js"
   },
   "author": "Philippe Hebert",
   "license": "MIT",

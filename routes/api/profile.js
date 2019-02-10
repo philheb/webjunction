@@ -32,4 +32,65 @@ router.get(
   }
 )
 
+// #Route   POST api/profile
+// #Desc    Create user profile
+// #Access  Private
+router.post(
+  '/',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    // Get inputs
+    const profileInputs = {}
+    profileInputs.user = req.user.id
+    if (req.body.handle) {
+      profileInputs.handle = req.body.handle
+    }
+
+    if (req.body.company) {
+      profileInputs.company = req.body.company
+    }
+
+    if (req.body.website) {
+      profileInputs.website = req.body.website
+    }
+
+    if (req.body.location) {
+      profileInputs.location = req.body.location
+    }
+
+    if (req.body.bio) {
+      profileInputs.bio = req.body.bio
+    }
+
+    if (req.body.status) {
+      profileInputs.status = req.body.status
+    }
+
+    if (req.body.githubusername) {
+      profileInputs.githubusername = req.body.githubusername
+    }
+    //Skills are an array***
+    if (typeof req.body.skills !== 'undefined') {
+      profileInputs.skills = req.body.skills.split(',')
+    }
+    // Social
+    profileInputs.social = {}
+    if (req.body.youtube) {
+      profileInputs.social.youtube = req.body.youtube
+    }
+    if (req.body.facebook) {
+      profileInputs.social.facebook = req.body.facebook
+    }
+    if (req.body.instagram) {
+      profileInputs.social.instagram = req.body.instagram
+    }
+    if (req.body.linkedin) {
+      profileInputs.social.linkedin = req.body.linkedin
+    }
+    if (req.body.twitter) {
+      profileInputs.social.twitter = req.body.twitter
+    }
+  }
+)
+
 module.exports = router

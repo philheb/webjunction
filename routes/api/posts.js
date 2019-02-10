@@ -1,5 +1,4 @@
 const express = require("express");
-
 const router = express.Router();
 
 // #Route   GET api/posts/test

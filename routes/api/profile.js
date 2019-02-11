@@ -33,7 +33,7 @@ router.get(
 )
 
 // #Route   POST api/profile
-// #Desc    Create user profile
+// #Desc    Create or Edit user profile
 // #Access  Private
 router.post(
   '/',
@@ -41,6 +41,7 @@ router.post(
   (req, res) => {
     // Get inputs
     const profileInputs = {}
+
     profileInputs.user = req.user.id
     if (req.body.handle) {
       profileInputs.handle = req.body.handle
@@ -90,6 +91,29 @@ router.post(
     if (req.body.twitter) {
       profileInputs.social.twitter = req.body.twitter
     }
+
+    Profile.findOne({ user: req.user.id }).then(profile => {
+      if (profile) {
+        // Update
+        Profile.findOneAndUpdate(
+          { user: req.user.id },
+          { $set: profileInputs },
+          { new: true }
+        ).then(profile => res.json(profile))
+      } else {
+        // Create
+
+        // Check if handle exists
+        Profile.findOne({ handle: profileInputs.handle }).then(profile => {
+          if (profile) {
+            errors.handle = 'That handle already exists'
+            res.status(400).jason(errors)
+          }
+          // Save new profile
+          new Profile(profileInputs).save().then(profile => res.json(profile))
+        })
+      }
+    })
   }
 )
 

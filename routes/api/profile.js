@@ -3,6 +3,10 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const passport = require('passport')
 
+//Load validations
+const validateProfileInput = require('../../validation/profile')
+
+// Load models
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 
@@ -21,6 +25,7 @@ router.get(
     const errors = {}
 
     Profile.findOne({ user: req.user.id })
+      .populate('user', ['name', 'avatar'])
       .then(profile => {
         if (!profile) {
           errors.noprofile = 'There is no profile for this user'
@@ -32,6 +37,64 @@ router.get(
   }
 )
 
+// #Route   GET api/profile/hall
+// #Desc    Get all profiles
+// #Access  Public
+router.get('/all', (req, res) => {
+  const errors = {}
+
+  Profile.find()
+    .populate('user', ['name', 'avatar'])
+    .then(profiles => {
+      if (!profiles) {
+        errors.noprofile = 'There are no profiles yet'
+        return res.status(404).json(errors)
+      }
+      res.json(profiles)
+    })
+    .catch(err =>
+      res.status(404).json({ profile: 'There are no profiles yet' })
+    )
+})
+
+// #Route   GET api/profile/handle/:handle
+// #Desc    Get profile by handle
+// #Access  Public
+router.get('/handle/:handle', (req, res) => {
+  const errors = {}
+
+  Profile.findOne({ handle: req.params.handle })
+    .populate('user', ['name', 'avatar'])
+    .then(profile => {
+      if (!profile) {
+        errors.noprofile = 'There is no profile for this user yet'
+        res.status(404).json(errors)
+      }
+      res.json(profile)
+    })
+    .catch(err => res.status(404).json(err))
+})
+
+// #Route   GET api/profile/user/:user_id
+// #Desc    Get profile by user ID
+// #Access  Public
+router.get('/user/:user_id', (req, res) => {
+  const errors = {}
+
+  Profile.findOne({ user: req.params.user_id })
+    .populate('user', ['name', 'avatar'])
+    .then(profile => {
+      if (!profile) {
+        errors.noprofile = 'There is no profile for this user yet'
+        res.status(404).json(errors)
+      }
+      res.json(profile)
+    })
+    .catch(err =>
+      res.status(404).json({ profile: 'There is no profile for this user' })
+    )
+})
+
 // #Route   POST api/profile
 // #Desc    Create or Edit user profile
 // #Access  Private
@@ -39,6 +102,13 @@ router.post(
   '/',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
+    const { errors, isValid } = validateProfileInput(req.body)
+
+    // Check validation
+    if (!isValid) {
+      return res.status(400).json(errors)
+    }
+
     // Get inputs
     const profileInputs = {}
 

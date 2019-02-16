@@ -20,7 +20,7 @@ const PostSchema = new Schema({
     type: String,
   },
   likes: [
-    // User can like ONCE and take their like back
+    // User can 'like' ONCE and take their 'like' back
     {
       user: {
         type: Schema.Types.ObjectId,

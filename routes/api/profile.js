@@ -39,7 +39,7 @@ router.get(
   }
 )
 
-// #Route   GET api/profile/hall
+// #Route   GET api/profile/all
 // #Desc    Get all profiles
 // #Access  Public
 router.get('/all', (req, res) => {

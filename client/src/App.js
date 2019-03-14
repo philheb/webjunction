@@ -16,6 +16,7 @@ import Register from './components/Auth/Register'
 import Login from './components/Auth/Login'
 import Footer from './components/Layout/Footer/Footer'
 import Dashboard from './components/Dashboard/Dashboard'
+import CreateProfile from './components/CreateProfile/CreateProfile'
 
 import './App.css'
 
@@ -52,9 +53,12 @@ class App extends Component {
             <div className="container">
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              {/* Cannot access private route if not logged in */}
               <Switch>
-                {/* Cannot access private route if not logged in */}
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/create-profile" component={CreateProfile} />
               </Switch>
             </div>
             <Footer />

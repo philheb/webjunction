@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import './Landing.css'
-import Video from '../../../assets/videos/brainstation.mp4'
+import Video from '../../../assets/videos/We-Work-We-Wait.mp4'
 
 class Landing extends Component {
   componentDidMount() {

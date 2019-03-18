@@ -18,6 +18,11 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
+          <Link className="nav-link" to="/dashboard">
+            Dashboard
+          </Link>
+        </li>
+        <li className="nav-item">
           <a href="/" onClick={this.onLogoutClick} className="nav-link">
             <img
               className="rounded-circle"
@@ -52,7 +57,7 @@ class Navbar extends Component {
         {' '}
         {/*navbar-dark bg-dark*/}
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <Link to="/" className="navbar-brand">
             WebJunction
           </Link>
           <button

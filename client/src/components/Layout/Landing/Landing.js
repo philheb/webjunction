@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import './Landing.css'
-import Video from '../../../assets/videos/We-Work-We-Wait.mp4'
 
 class Landing extends Component {
   componentDidMount() {
@@ -14,7 +13,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <video className="landing-video" src={Video} loop autoPlay muted />
+        {/* <video className="landing-video" src={Video} loop autoPlay muted /> */}
         <div className="dark-overlay landing-inner text-light">
           <div className="container">
             <div className="row">

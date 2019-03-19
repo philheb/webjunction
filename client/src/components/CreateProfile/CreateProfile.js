@@ -210,7 +210,7 @@ class CreateProfile extends Component {
                   <span className="text-muted"> Optional</span>
                 </div>
                 {socialInputs}
-                <button type="submit" className="btn btn-info btn-block mt-4">
+                <button type="submit" className="btn btn-primary btn-block mt-4">
                   Submit
                 </button>
               </form>

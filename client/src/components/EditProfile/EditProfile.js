@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import TextFieldGroup from '../Form/TextFieldGroup'
 import TextAreaFieldGroup from '../Form/TextAreaFieldGroup'
@@ -164,6 +164,9 @@ class EditProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
+              <Link to="/dashboard" className="btn btn-light">
+                Go Back
+              </Link>
               <h1 className="display-4 text-center">Edit Your Profile</h1>
               <small className="d-block pb-3">* = required</small>
               <form onSubmit={this.onSubmit}>
@@ -247,7 +250,7 @@ class EditProfile extends Component {
                   <span className="text-muted"> Optional</span>
                 </div>
                 {socialInputs}
-                <button type="submit" className="btn btn-info btn-block mt-4">
+                <button type="submit" className="btn btn-primary btn-block mt-4">
                   Submit
                 </button>
               </form>

@@ -8,7 +8,7 @@ class ProfileHeader extends Component {
       <div>
         <div className="row">
           <div className="col-md-12">
-            <div className="card card-body bg-info text-white mb-3">
+            <div className="card card-body bg-primary text-white mb-3">
               <div className="row">
                 <div className="col-4 col-md-3 m-auto">
                   <img className="rounded-circle" src={profile.user.avatar} alt="" />
@@ -24,14 +24,13 @@ class ProfileHeader extends Component {
                 <p>
                   {isEmpty(profile.website) ? null : (
                     <a className="text-white p-2" href={profile.website} target="_blank">
-                      <i className="fab fa-globe fa-2x" />
+                      <i className="fas fa-globe fa-2x" />
                     </a>
                   )}
 
                   {isEmpty(profile.social && profile.social.twitter) ? null : (
                     <a className="text-white p-2" href={profile.social.twitter} target="_blank">
                       <i className="fab fa-twitter fa-2x" />
-                      {profile.social.twitter}
                     </a>
                   )}
 
@@ -50,6 +49,12 @@ class ProfileHeader extends Component {
                   {isEmpty(profile.social && profile.social.instagram) ? null : (
                     <a className="text-white p-2" href={profile.social.instagram} target="_blank">
                       <i className="fab fa-instagram fa-2x" />
+                    </a>
+                  )}
+
+                  {isEmpty(profile.social && profile.social.youtube) ? null : (
+                    <a className="text-white p-2" href={profile.social.youtube} target="_blank">
+                      <i className="fab fa-youtube fa-2x" />
                     </a>
                   )}
                 </p>

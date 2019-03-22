@@ -25,7 +25,7 @@ class Landing extends Component {
                   each other. Blah blah
                 </p>
                 <hr />
-                <Link to="/register" className="btn btn-lg btn-primary mr-2">
+                <Link to="/register" className="btn btn-lg bg1 mr-2">
                   Sign Up
                 </Link>
                 <Link to="/login" className="btn btn-lg btn-light">

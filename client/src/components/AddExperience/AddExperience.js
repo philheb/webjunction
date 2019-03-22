@@ -127,7 +127,11 @@ class AddExperience extends Component {
                     error={this.state.errors.description}
                     info="Tell us about the position"
                   />
-                  <input type="submit" value="Submit" className="btn btn-primary btn-block mt-4" />
+                  <input
+                    type="submit"
+                    value="Submit"
+                    className="btn bg1 text-white btn-block mt-4"
+                  />
                 </form>
               </div>
             </div>

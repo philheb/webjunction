@@ -16,7 +16,7 @@ class Posts extends Component {
     if (posts === null || loading) {
       postContent = <Loader />
     } else {
-      postContent = <PostFeed posts={posts} />
+      // postContent = <PostFeed posts={posts} />
     }
     return (
       <div className="feed">

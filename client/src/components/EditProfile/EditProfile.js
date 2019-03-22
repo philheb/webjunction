@@ -243,14 +243,14 @@ class EditProfile extends Component {
                         displaySocialInputs: !prevState.displaySocialInputs,
                       }))
                     }
-                    className="btn btn-light"
+                    className="btn bg3 text-light"
                   >
                     Add Social Network Links
                   </button>
                   <span className="text-muted"> Optional</span>
                 </div>
                 {socialInputs}
-                <button type="submit" className="btn btn-primary btn-block mt-4">
+                <button type="submit" className="btn bg1 text-light btn-block mt-4">
                   Submit
                 </button>
               </form>

@@ -1,3 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Lilita+One");
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.bg0 {
+  background-color: #39c1e7;
+}
+.accent {
+  color: #39c1e7;
+}
+
+.accent1 {
+  color: #fe9025;
+}
+.bg1 {
+  background-color: #fe9025;
+}
+
+.accent2 {
+  color: #000000;
+}
+
+.bg2 {
+  background-color: #000000;
+}
+
+.accent3 {
+  color: #146185;
+}
+
+.bg3 {
+  background-color: #146185;
+}
+
 img {
   width: 100%;
 }
@@ -35,4 +77,19 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.logo {
+  font-family: "Lilita One", cursive;
+}
+
+.logo:hover,
+.nav-link:hover {
+  color: #fe9025 !important;
+  font-weight: bold;
+}
+
+.display-4 {
+  /* color: #fe9025; */
+  color: #146185;
 }

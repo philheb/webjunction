@@ -19,7 +19,7 @@ class ProfileItem extends Component {
               {isEmpty(profile.company) ? null : <span> at {profile.company}</span>}
             </p>
             <p>{isEmpty(profile.location) ? null : profile.location}</p>
-            <Link to={`/profile/${profile.handle}`} className="btn btn-primary">
+            <Link to={`/profile/${profile.handle}`} className="btn bg1 text-light">
               View Profile
             </Link>
           </div>

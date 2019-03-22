@@ -58,12 +58,12 @@ class Navbar extends Component {
     )
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
-        {' '}
-        {/*navbar-dark bg-dark*/}
+      <nav className="navbar navbar-expand-sm navbar-dark bg0 mb-4">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            WebJunction
+            <span style={{ fontWeight: 'bold' }} className="logo">
+              <i className="fas fa-code" /> WebJunction
+            </span>
           </Link>
           <button
             className="navbar-toggler"

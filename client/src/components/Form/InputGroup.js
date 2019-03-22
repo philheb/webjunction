@@ -7,7 +7,7 @@ const InputGroup = ({ type, name, placeholder, value, icon, error, onChange }) =
     <div className="input-group mb-3">
       <div className="input-group-prepend">
         <span className="input-group-text">
-          <i className={icon} />
+          <i className={icon} /> <p className="d-block"> http://</p>
         </span>
       </div>
       <input

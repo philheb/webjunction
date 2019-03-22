@@ -46,8 +46,6 @@ class Education extends Component {
 
 Education.propTypes = {
   deleteEducation: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired,
 }
 
 export default connect(

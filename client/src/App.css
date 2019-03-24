@@ -105,6 +105,11 @@ img {
   padding-top: 80px;
 }
 
+.landing-buttons {
+  width: 40%;
+  margin: 0 auto;
+}
+
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

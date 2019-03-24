@@ -21,16 +21,17 @@ class Landing extends Component {
                 <h1 className="display-3 mb-4">Web Junction</h1>
                 <p className="lead">
                   {' '}
-                  Create a developer and designer profile/portfolio, share posts and get help from
-                  each other. Blah blah
+                  Create a developer profile/portfolio, share posts and get help from each other.
                 </p>
                 <hr />
-                <Link to="/register" className="btn btn-lg bg1 text-light mr-2">
-                  Sign Up
-                </Link>
-                <Link to="/login" className="btn btn-lg bg2 text-light">
-                  Login
-                </Link>
+                <div className="landing-buttons">
+                  <Link to="/register" className="btn btn-lg btn-block bg1 text-light mr-2">
+                    Sign Up
+                  </Link>
+                  <Link to="/login" className="btn btn-lg btn-block bg2 text-light">
+                    Login
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

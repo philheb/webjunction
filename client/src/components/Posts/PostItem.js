@@ -28,16 +28,13 @@ class PostItem extends Component {
     return (
       <div className="card card-body mb-3">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-xs-1 col-sm-2">
             <a href="profile.html">
-              {/* <img className="rounded-circle" src={post.avatar} alt="" /> */}
-
-              <img className="rounded-circle d-none d-md-block" src={post.avatar} alt="" />
+              <img className="rounded-circle d-none d-sm-block" src={post.avatar} alt="" />
             </a>
-            <br />
-            <p className="text-center">{post.name}</p>
           </div>
-          <div className="col-md-8">
+          <div className="col-8">
+            <h3>{post.name}</h3>
             <p className="lead">{post.text}</p>
             {showActions ? (
               <span>
@@ -66,14 +63,14 @@ class PostItem extends Component {
               </span>
             ) : null}
           </div>
-          <div className="col-md-2 text-right">
+          <div className="col-xs-4 col-2 text-right">
             {post.user === auth.user.id ? (
               <button
                 type="button"
                 onClick={() => this.onDeleteClick(post._id)}
-                className="btn bg6 mr-1"
+                className="btn bg6"
               >
-                <i class="fas fa-trash-alt text-white" />
+                <i className="fas fa-trash-alt text-white" />
               </button>
             ) : null}
           </div>

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import PostForm from './PostForm'
 import Loader from '../Layout/Loader/Loader'
 import { getPosts } from '../../actions/postActions'
+import PostFeed from './PostFeed'
 
 class Posts extends Component {
   componentDidMount() {
@@ -16,7 +17,7 @@ class Posts extends Component {
     if (posts === null || loading) {
       postContent = <Loader />
     } else {
-      // postContent = <PostFeed posts={posts} />
+      postContent = <PostFeed posts={posts} />
     }
     return (
       <div className="feed">

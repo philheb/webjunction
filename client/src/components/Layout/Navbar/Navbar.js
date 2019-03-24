@@ -58,7 +58,7 @@ class Navbar extends Component {
     )
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg0 mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg5 mb-4">
         <div className="container">
           <Link to="/" className="navbar-brand">
             <span style={{ fontWeight: 'bold' }} className="logo">

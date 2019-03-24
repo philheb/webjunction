@@ -188,7 +188,7 @@ class CreateProfile extends Component {
                   info="Include your username if you want people to see your GitHub link and your latest repositories"
                 />
                 <TextAreaFieldGroup
-                  placeholder="Shirt Bio"
+                  placeholder="Short Bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}

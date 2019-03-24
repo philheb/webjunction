@@ -36,7 +36,7 @@ router.post('/register', (req, res) => {
       const avatar = gravatar.url(req.body.email, {
         s: '200',
         r: 'pg',
-        d: 'mm',
+        d: 'retro',
       })
 
       const newUser = new User({
@@ -90,17 +90,12 @@ router.post('/login', (req, res) => {
           avatar: user.avatar,
         }
         //Sign token
-        jwt.sign(
-          payload,
-          keys.secretOrKey,
-          { expiresIn: '1d' },
-          (err, token) => {
-            res.json({
-              success: true,
-              token: 'Bearer ' + token,
-            })
-          }
-        )
+        jwt.sign(payload, keys.secretOrKey, { expiresIn: '1d' }, (err, token) => {
+          res.json({
+            success: true,
+            token: 'Bearer ' + token,
+          })
+        })
       } else {
         errors.password = 'Password is incorrect'
         return res.status(400).json(errors)
@@ -112,16 +107,12 @@ router.post('/login', (req, res) => {
 // #Route   GET api/users/current
 // #Desc    Returning current user
 // #Access  Private
-router.get(
-  '/current',
-  passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    res.json({
-      id: req.user.id,
-      name: req.user.name,
-      email: req.user.email,
-    })
-  }
-)
+router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
+  res.json({
+    id: req.user.id,
+    name: req.user.name,
+    email: req.user.email,
+  })
+})
 
 module.exports = router

@@ -31,7 +31,7 @@ class CommentForm extends Component {
       name: user.name,
       avatar: user.avatar,
     }
-    this.props.addPost(newPost)
+    this.props.addComment(postId, newComment)
     this.setState({ text: '' })
   }
 
@@ -76,5 +76,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addPost }
+  { addComment }
 )(CommentForm)

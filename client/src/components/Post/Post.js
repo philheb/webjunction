@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import Loader from '../Layout/Loader/Loader'
 import { getPost } from '../../actions/postActions'
 import PostItem from '../Posts/PostItem'
+import CommentForm from './CommentForm'
+import CommentFeed from './CommentFeed'
 
 class Post extends Component {
   componentDidMount() {
@@ -13,16 +15,20 @@ class Post extends Component {
 
   render() {
     const { post, loading } = this.props.post
+    console.log(post.comments, post._id)
     let postContent
-    if (post === null || loading) {
+    if (post === null || loading || Object.keys(post).length === 0) {
       postContent = <Loader />
     } else {
       postContent = (
         <div>
           <PostItem post={post} showActions={false} />
+          <CommentForm postId={post._id} />
+          <CommentFeed postId={post._id} comments={post.comments} />
         </div>
       )
     }
+
     return (
       <div className="post">
         <div className="container">

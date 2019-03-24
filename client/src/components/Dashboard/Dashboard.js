@@ -32,7 +32,7 @@ class Dashboard extends Component {
           <div>
             <p className="lead text-muted">
               Welcome{' '}
-              <Link className="accent3" to={`/profile/${profile.handle}`}>
+              <Link className="accent2" to={`/profile/${profile.handle}`}>
                 {user.name}
               </Link>
             </p>
@@ -51,7 +51,7 @@ class Dashboard extends Component {
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
             <p className="">You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg bg3 text-light">
+            <Link to="/create-profile" className="btn btn-lg bg2 text-light">
               Create Profile
             </Link>
           </div>

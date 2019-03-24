@@ -33,16 +33,16 @@ class ProfileGithub extends Component {
         <div className="row">
           <div className="col-md-6">
             <h4>
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="accent3">
+              <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="accent2">
                 {repo.name}
               </a>
             </h4>
             <p>{repo.description}</p>
           </div>
           <div className="col-md-6">
-            <span className="badge badge-primary mr-1">Stars: {repo.stargazers_count}</span>
-            <span className="badge badge-secondary mr-1">Watchers: {repo.watchers_count}</span>
-            <span className="badge badge-success">Forks: {repo.forks_count}</span>
+            <span className="badge bg0 text-white mr-1">Stars: {repo.stargazers_count}</span>
+            <span className="badge bg2-light text-white mr-1">Watchers: {repo.watchers_count}</span>
+            <span className="badge bg1 text-white">Forks: {repo.forks_count}</span>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@ class ProfileGithub extends Component {
     return (
       <div ref="myRef">
         <hr />
-        <h3 className="mb-4">Latest GitHub Repos</h3>
+        <h3 className="mb-4 accent2-light">Latest GitHub Repos</h3>
         {repoItems}
       </div>
     )

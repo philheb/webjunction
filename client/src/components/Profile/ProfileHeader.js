@@ -8,14 +8,14 @@ class ProfileHeader extends Component {
       <div>
         <div className="row">
           <div className="col-md-12">
-            <div className="card card-body bg4 text-white mb-3">
+            <div className="card card-body bg1-light text-light mb-3">
               <div className="row">
                 <div className="col-4 col-md-3 m-auto">
                   <img className="rounded-circle" src={profile.user.avatar} alt="" />
                 </div>
               </div>
               <div className="text-center">
-                <h1 className="display-4 text-center">{profile.user.name}</h1>
+                <h1 className="display-4 text-light text-center">{profile.user.name}</h1>
                 <p className="lead text-center">
                   {profile.status}{' '}
                   {isEmpty(profile.company) ? null : <span>at {profile.company}</span>}
@@ -40,7 +40,7 @@ class ProfileHeader extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fab fa-twitter accent1 fa-2x" />
+                      <i className="fab fa-twitter accent2 fa-2x" />
                     </a>
                   )}
 
@@ -62,7 +62,7 @@ class ProfileHeader extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fab fa-linkedin accent1 fa-2x" />
+                      <i className="fab fa-linkedin accent2 fa-2x" />
                     </a>
                   )}
 

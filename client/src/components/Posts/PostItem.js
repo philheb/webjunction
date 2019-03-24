@@ -30,12 +30,14 @@ class PostItem extends Component {
         <div className="row">
           <div className="col-md-2">
             <a href="profile.html">
+              {/* <img className="rounded-circle" src={post.avatar} alt="" /> */}
+
               <img className="rounded-circle d-none d-md-block" src={post.avatar} alt="" />
             </a>
             <br />
             <p className="text-center">{post.name}</p>
           </div>
-          <div className="col-md-10">
+          <div className="col-md-8">
             <p className="lead">{post.text}</p>
             {showActions ? (
               <span>
@@ -46,7 +48,7 @@ class PostItem extends Component {
                 >
                   <i
                     className={classnames('fas fa-thumbs-up', {
-                      accent: this.findUserLike(post.likes),
+                      accent1: this.findUserLike(post.likes),
                     })}
                   />
                   <span className="badge badge-light">{post.likes.length}</span>
@@ -58,19 +60,21 @@ class PostItem extends Component {
                 >
                   <i className="text-secondary fas fa-thumbs-down" />
                 </button>
-                <Link to={`/post/${post._id}`} className="btn bg3 text-light mr-1">
+                <Link to={`/post/${post._id}`} className="btn bg1 text-light mr-1">
                   Comments
                 </Link>
-                {post.user === auth.user.id ? (
-                  <button
-                    type="button"
-                    onClick={() => this.onDeleteClick(post._id)}
-                    className="btn btn-danger mr-1"
-                  >
-                    <i className="fas fa-times" />
-                  </button>
-                ) : null}
               </span>
+            ) : null}
+          </div>
+          <div className="col-md-2 text-right">
+            {post.user === auth.user.id ? (
+              <button
+                type="button"
+                onClick={() => this.onDeleteClick(post._id)}
+                className="btn bg6 mr-1"
+              >
+                <i class="fas fa-trash-alt text-white" />
+              </button>
             ) : null}
           </div>
         </div>
@@ -80,7 +84,7 @@ class PostItem extends Component {
 }
 
 PostItem.defaultProps = {
-  showActions: true
+  showActions: true,
 }
 
 PostItem.propTypes = {

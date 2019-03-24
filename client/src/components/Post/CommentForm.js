@@ -51,7 +51,7 @@ class CommentForm extends Component {
                   error={this.state.errors.text}
                 />
               </div>
-              <button type="submit" className="btn bg1">
+              <button type="submit" className="btn bg1 text-white">
                 Submit
               </button>
             </form>

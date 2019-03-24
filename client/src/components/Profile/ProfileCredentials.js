@@ -61,7 +61,7 @@ class ProfileCredentials extends Component {
     return (
       <div className="row">
         <div className="col-md-6">
-          <h3 className="text-center accent3">Experience</h3>
+          <h3 className="text-center accent2-light">Experience</h3>
           {exp.length > 0 ? (
             <ul className="list-group">{exp}</ul>
           ) : (
@@ -69,7 +69,7 @@ class ProfileCredentials extends Component {
           )}
         </div>
         <div className="col-md-6">
-          <h3 className="text-center accent3">Education</h3>
+          <h3 className="text-center accent2-light">Education</h3>
           {edu.length > 0 ? (
             <ul className="list-group">{edu}</ul>
           ) : (

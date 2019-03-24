@@ -10,26 +10,42 @@
   outline-offset: -2px;
 }
 
-.bg0 {
-  background-color: #39c1e7;
-}
 .accent {
-  color: #39c1e7;
+  color: #0abde3;
+}
+
+.bg0 {
+  background-color: #0abde3;
+}
+
+.bg0-light {
+  background-color: #48dbfb;
 }
 
 .accent1 {
-  color: #fe9025;
+  color: #10ac84;
 }
 .bg1 {
-  background-color: #fe9025;
+  background-color: #10ac84;
+}
+
+.bg1-light {
+  background-color: #1dd1a1;
 }
 
 .accent2 {
-  color: #000000;
+  color: #222f3e;
+}
+.accent2-light {
+  color: #576574;
 }
 
 .bg2 {
-  background-color: #000000;
+  background-color: #222f3e;
+}
+
+.bg2-light {
+  background-color: #576574;
 }
 
 .accent3 {
@@ -54,6 +70,22 @@
 
 .bg5 {
   background-color: #1dd1a1;
+}
+
+.accent6 {
+  color: #ee5253;
+}
+
+.bg6 {
+  background-color: #ee5253;
+}
+
+.accent7 {
+  color: #c8d6e5;
+}
+
+.bg7 {
+  background-color: #c8d6e5;
 }
 
 img {
@@ -101,11 +133,19 @@ img {
 
 .logo:hover,
 .nav-link:hover {
-  color: #fe9025 !important;
-  font-weight: bold;
+  color: #c8d6e5 !important;
+  /* font-weight: bold; */
 }
 
 .display-4 {
-  /* color: #fe9025; */
-  color: #146185;
+  color: #222f3e;
+}
+
+.rounded-bg {
+  width: 100%;
+  background-color: white;
+}
+
+.rounded-circle {
+  width: 100%;
 }

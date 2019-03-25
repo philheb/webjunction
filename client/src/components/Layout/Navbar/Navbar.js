@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { logoutUser } from '../../../actions/authActions'
@@ -18,16 +20,16 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/feed">
+          <NavLink className="nav-link text-white" to="/feed" activeClassName="active">
             <i className="fas fa-edit mr-1" />
             Post Feed
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/dashboard">
+          <NavLink className="nav-link text-white" to="/dashboard" activeClassName="active">
             <i className="fas fa-tachometer-alt mr-1" />
             Dashboard
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
           <a href="/" onClick={this.onLogoutClick} className="nav-link text-white">
@@ -47,22 +49,22 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/register">
+          <NavLink className="nav-link text-white" to="/register" activeClassName="active">
             <i className="fas fa-user-plus mr-1" />
             Sign Up
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/login">
+          <NavLink className="nav-link text-white" to="/login" activeClassName="active">
             <i className="fas fa-user mr-1" />
             Login
-          </Link>
+          </NavLink>
         </li>
       </ul>
     )
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg0 mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg0 mb-4 shadow-lg">
         <div className="container">
           <Link to="/" className="navbar-brand">
             <span className="logo">
@@ -81,10 +83,10 @@ class Navbar extends Component {
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/profiles">
+                <NavLink className="nav-link text-white" to="/profiles" activeClassName="active">
                   <i className="fas fa-users mr-1" />
                   Developers
-                </Link>
+                </NavLink>
               </li>
             </ul>
             {isAuthenticated ? authLinks : guestLinks}
@@ -104,7 +106,9 @@ const mapStateToProps = state => ({
   auth: state.auth,
 })
 
-export default connect(
-  mapStateToProps,
-  { logoutUser, clearCurrentProfile }
-)(Navbar)
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { logoutUser, clearCurrentProfile }
+  )(Navbar)
+)

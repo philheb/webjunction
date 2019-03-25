@@ -43,7 +43,6 @@
 .bg2 {
   background-color: #222f3e;
 }
-
 .bg2-light {
   background-color: #576574;
 }
@@ -51,31 +50,13 @@
 .accent3 {
   color: #146185;
 }
-
 .bg3 {
   background-color: #146185;
-}
-
-.accent4 {
-  color: #10ac84;
-}
-
-.bg4 {
-  background-color: #10ac84;
-}
-
-.accent5 {
-  color: #1dd1a1;
-}
-
-.bg5 {
-  background-color: #1dd1a1;
 }
 
 .accent6 {
   color: #ee5253;
 }
-
 .bg6 {
   background-color: #ee5253;
 }
@@ -83,13 +64,23 @@
 .accent7 {
   color: #c8d6e5;
 }
-
 .bg7 {
   background-color: #c8d6e5;
 }
 
+.accent8 {
+  color: #feca57;
+}
+.bg8 {
+  background-color: #feca57;
+}
+
 img {
   width: 100%;
+}
+
+.active {
+  color: #feca57 !important;
 }
 
 .landing {
@@ -97,6 +88,8 @@ img {
   height: 90vh;
   margin-top: -24px;
   margin-bottom: -50px;
+  background-image: url("./assets/images/teamwork.jpg");
+  background-size: cover;
 }
 
 .landing-inner {
@@ -109,7 +102,7 @@ img {
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -137,7 +130,6 @@ img {
 .logo:hover,
 .nav-link:hover {
   color: #c8d6e5 !important;
-  /* font-weight: bold; */
 }
 
 .display-4 {
@@ -151,4 +143,15 @@ img {
 
 .rounded-circle {
   width: 100%;
+}
+
+th {
+  border-top: 1px solid #222f3e !important;
+  border-bottom: 2px solid #222f3e !important;
+  /* background-color: #48dbfb; */
+  background-color: #1dd1a17e;
+}
+
+.btn {
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.1) !important;
 }

@@ -29,7 +29,7 @@ class Education extends Component {
       <div>
         <h4 className="mb-4">Education</h4>
         <table className="table">
-          <thead>
+          <thead className="shadow">
             <tr>
               <th>School</th>
               <th>Degree</th>

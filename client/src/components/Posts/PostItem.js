@@ -26,9 +26,9 @@ class PostItem extends Component {
   render() {
     const { auth, post, showActions } = this.props
     return (
-      <div className="card card-body mb-3">
+      <div className="card card-body mb-3 shadow">
         <div className="row">
-          <div className="col-xs-1 col-sm-2">
+          <div className="col-xs-0 col-sm-2">
             <a href="profile.html">
               <img className="rounded-circle d-none d-sm-block" src={post.avatar} alt="" />
             </a>

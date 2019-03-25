@@ -8,7 +8,7 @@ class ProfileHeader extends Component {
       <div>
         <div className="row">
           <div className="col-md-12">
-            <div className="card card-body bg1-light text-light mb-3">
+            <div className="card card-body bg1-light text-light mb-3 shadow">
               <div className="row">
                 <div className="col-4 col-md-3 m-auto">
                   <img className="rounded-circle" src={profile.user.avatar} alt="" />
@@ -29,7 +29,7 @@ class ProfileHeader extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fas fa-globe accent1 fa-2x" />
+                      <i className="fas fa-globe accent2 fa-2x" />
                     </a>
                   )}
 
@@ -51,7 +51,7 @@ class ProfileHeader extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fab fa-facebook accent1 fa-2x" />
+                      <i className="fab fa-facebook accent2 fa-2x" />
                     </a>
                   )}
 
@@ -73,7 +73,7 @@ class ProfileHeader extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fab fa-instagram accent1 fa-2x" />
+                      <i className="fab fa-instagram accent2 fa-2x" />
                     </a>
                   )}
 
@@ -84,7 +84,7 @@ class ProfileHeader extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fab fa-youtube accent1 fa-2x" />
+                      <i className="fab fa-youtube accent2 fa-2x" />
                     </a>
                   )}
                 </p>

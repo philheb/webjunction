@@ -87,7 +87,7 @@ class Register extends Component {
                   onChange={this.handleChange}
                   error={errors.password2}
                 />
-                <input type="submit" className="btn bg1 text-light btn-block mt-4" />
+                <input type="submit" className="btn btn-lg bg1 text-light btn-block mt-4" />
               </form>
             </div>
           </div>

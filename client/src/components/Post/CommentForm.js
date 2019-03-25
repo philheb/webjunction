@@ -37,7 +37,7 @@ class CommentForm extends Component {
 
   render() {
     return (
-      <div className="post-form mb-3">
+      <div className="post-form mb-3 shadow">
         <div className="card card-info">
           <div className="card-header bg2-light text-white">Make a comment...</div>
           <div className="card-body">

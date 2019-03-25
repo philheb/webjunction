@@ -69,7 +69,9 @@ class Login extends Component {
                   error={errors.password}
                 />
 
-                <input type="submit" className="btn bg1 text-light btn-block mt-4" />
+                <button type="submit" className="btn btn-lg bg1 text-white btn-block mt-4">
+                  Submit
+                </button>
               </form>
             </div>
           </div>

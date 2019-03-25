@@ -36,7 +36,7 @@ class PostForm extends Component {
 
   render() {
     return (
-      <div className="post-form mb-3">
+      <div className="post-form mb-3 shadow">
         <div className="card card-info">
           <div className="card-header bg2-light text-white">Say Something...</div>
           <div className="card-body">

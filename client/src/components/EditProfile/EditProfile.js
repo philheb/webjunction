@@ -118,7 +118,7 @@ class EditProfile extends Component {
           <InputGroup
             placeholder="Twitter Profile URL"
             name="twitter"
-            icon="fab fa-twitter"
+            icon="fab fa-twitter mr-1"
             value={this.state.twitter}
             onChange={this.onChange}
             error={this.state.errors.twitter}
@@ -126,7 +126,7 @@ class EditProfile extends Component {
           <InputGroup
             placeholder="Facebook Profile URL"
             name="facebook"
-            icon="fab fa-facebook"
+            icon="fab fa-facebook mr-1"
             value={this.state.facebook}
             onChange={this.onChange}
             error={this.state.errors.facebook}
@@ -134,7 +134,7 @@ class EditProfile extends Component {
           <InputGroup
             placeholder="LinkedIn Profile URL"
             name="linkedin"
-            icon="fab fa-linkedin"
+            icon="fab fa-linkedin mr-1"
             value={this.state.linkedin}
             onChange={this.onChange}
             error={this.state.errors.linkedin}
@@ -142,7 +142,7 @@ class EditProfile extends Component {
           <InputGroup
             placeholder="Youtube Profile URL"
             name="youtube"
-            icon="fab fa-youtube"
+            icon="fab fa-youtube mr-1"
             value={this.state.youtube}
             onChange={this.onChange}
             error={this.state.errors.youtube}
@@ -150,7 +150,7 @@ class EditProfile extends Component {
           <InputGroup
             placeholder="Instagram Profile URL"
             name="instagram"
-            icon="fab fa-instagram"
+            icon="fab fa-instagram mr-1"
             value={this.state.instagram}
             onChange={this.onChange}
             error={this.state.errors.instagram}
@@ -243,7 +243,7 @@ class EditProfile extends Component {
                         displaySocialInputs: !prevState.displaySocialInputs,
                       }))
                     }
-                    className="btn bg3 text-light"
+                    className="btn bg8 text-light"
                   >
                     Add Social Network Links
                   </button>

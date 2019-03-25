@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
-import './Landing.css'
+import team from '../../../assets/images/noun_teamwork.svg'
 
 class Landing extends Component {
   componentDidMount() {
@@ -30,6 +30,7 @@ class Landing extends Component {
                   <Link to="/login" className="btn btn-lg btn-block bg2 text-light">
                     Login
                   </Link>
+                  <img src={team} style={{ width: '100px', marginTop: '40px' }} alt="teamwork" />
                 </div>
               </div>
             </div>

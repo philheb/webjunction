@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import keys from '../../keys/keys'
 
 class ProfileGithub extends Component {
   state = {
-    clientId: '458ae37de28ac1a97ed7',
-    clientSecret: 'c8bb04a14df64166adf03168d0c79ad3a4cd5368',
+    clientId: keys.clientId,
+    clientSecret: keys.clientSecret,
     count: 5,
     sort: 'created: asc',
     repos: [],

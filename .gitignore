@@ -1,7 +1,7 @@
 /node_modules
 package-lock.json
 /config/keys_dev.js
-/client/config/keys_dev.js
+/client/keys/keys_dev.js
 .eslintrc.js
 .eslintrc.json
 .prettierrc.json

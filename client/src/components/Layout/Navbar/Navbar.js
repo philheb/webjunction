@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
-import { withRouter } from 'react-router-dom'
+import { NavLink, withRouter, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { logoutUser } from '../../../actions/authActions'
@@ -34,7 +32,7 @@ class Navbar extends Component {
         <li className="nav-item">
           <a href="/" onClick={this.onLogoutClick} className="nav-link text-white">
             <img
-              className="rounded-circle"
+              className="rounded-circle shadow"
               src={user.avatar}
               alt={user.name}
               style={{ width: '25px', marginRight: '5px' }}

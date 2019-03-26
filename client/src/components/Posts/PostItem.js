@@ -30,7 +30,7 @@ class PostItem extends Component {
         <div className="row">
           <div className="col-xs-0 col-sm-2">
             <a href="profile.html">
-              <img className="rounded-circle d-none d-sm-block" src={post.avatar} alt="" />
+              <img className="rounded-circle d-none d-sm-block shadow" src={post.avatar} alt="" />
             </a>
           </div>
           <div className="col-8">

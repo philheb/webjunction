@@ -203,7 +203,7 @@ class CreateProfile extends Component {
                         displaySocialInputs: !prevState.displaySocialInputs,
                       }))
                     }
-                    className="btn bg8 text-light mr-2"
+                    className="btn bg8 text-light"
                   >
                     Add Social Network Links
                   </button>

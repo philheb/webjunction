@@ -30,7 +30,12 @@ class Landing extends Component {
                   <Link to="/login" className="btn btn-lg btn-block bg2 text-light">
                     Login
                   </Link>
-                  <img src={team} style={{ width: '100px', marginTop: '40px' }} alt="teamwork" />
+                  <img
+                    className="team d-none d-md-inline"
+                    src={team}
+                    style={{ width: '100px', marginTop: '40px' }}
+                    alt="teamwork"
+                  />
                 </div>
               </div>
             </div>

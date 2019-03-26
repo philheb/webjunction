@@ -24,7 +24,7 @@ class Landing extends Component {
                 </p>
                 <hr />
                 <div className="landing-buttons">
-                  <Link to="/register" className="btn btn-lg btn-block bg1 text-light mr-2">
+                  <Link to="/register" className="btn btn-lg btn-block bg1 text-light mb-2">
                     Sign Up
                   </Link>
                   <Link to="/login" className="btn btn-lg btn-block bg2 text-light">

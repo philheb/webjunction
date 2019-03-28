@@ -21,5 +21,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(PrivateRoute)
-
-//Ref https://medium.com/@tomlarge/private-routes-with-react-router-dom-28e9f40c7146

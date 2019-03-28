@@ -6,7 +6,6 @@ import isEmpty from '../../validation/is-empty'
 class ProfileItem extends Component {
   render() {
     const { profile } = this.props
-    // const icon = `fab fa-${skill} accent2 pr-1`
     return (
       <div className="card card-body bg-light mb-3 shadow">
         <div className="row">

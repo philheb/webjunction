@@ -28,24 +28,14 @@ import Post from './components/Post/Post'
 
 import './App.css'
 
-// Check for token
 if (localStorage.jwtToken) {
-  // Set auth token header auth
   setAuthToken(localStorage.jwtToken)
-  //Decode token and get user info and expiration
   const decoded = jwtDecode(localStorage.jwtToken)
-  // Set use and isAuthenticated
   store.dispatch(setCurrentUser(decoded))
-
-  //Check for expired token
   const currentTime = Date.now() / 1000
   if (decoded.exp < currentTime) {
-    //Logout user
     store.dispatch(logoutUser())
-    //Clear current profile
     store.dispatch(clearCurrentProfile())
-
-    //Redirect to login
     window.location.href = '/login'
   }
 }
@@ -63,7 +53,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
-              {/* Cannot access private route if not logged in */}
+
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>

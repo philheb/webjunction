@@ -3,87 +3,72 @@
 * {
   font-family: "Rubik", sans-serif;
 }
-
 .btn:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-
 .accent {
   color: #0abde3;
 }
-
 .bg0 {
   background-color: #0abde3;
 }
-
 .bg0-light {
   background-color: #48dbfb;
 }
-
 .accent1 {
   color: #10ac84;
 }
 .bg1 {
   background-color: #10ac84;
 }
-
 .bg1-light {
   background-color: #1dd1a1;
 }
-
 .accent2 {
   color: #222f3e;
 }
 .accent2-light {
   color: #576574;
 }
-
 .bg2 {
   background-color: #222f3e;
 }
 .bg2-light {
   background-color: #576574;
 }
-
 .accent3 {
   color: #146185;
 }
 .bg3 {
   background-color: #146185;
 }
-
 .accent6 {
   color: #ee5253;
 }
 .bg6 {
   background-color: #ee5253;
 }
-
 .accent7 {
   color: #c8d6e5;
 }
 .bg7 {
   background-color: #c8d6e5;
 }
-
 .accent8 {
   color: #feca57;
 }
 .bg8 {
   background-color: #feca57;
 }
-
 img {
   width: 100%;
 }
-
 .active {
   color: #feca57 !important;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
 }
-
 .landing {
   position: relative;
   height: 90vh;
@@ -92,16 +77,13 @@ img {
   background-image: url("./assets/images/teamwork.jpg");
   background-size: cover;
 }
-
 .landing-inner {
   padding-top: 80px;
 }
-
 .landing-buttons {
   width: 40%;
   margin: 0 auto;
 }
-
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.4);
   position: relative;
@@ -110,68 +92,54 @@ img {
   width: 100%;
   height: 100%;
 }
-
 @media only screen and (min-width: 600px) {
   .dark-overlay {
     background-color: rgba(0, 0, 0, 0.6);
     position: relative;
-    top: 0;
+    top: 12.5%;
     left: 12.5%;
     width: 75%;
-    height: 100%;
+    height: 75%;
   }
 }
-
 .card-form {
   opacity: 0.9;
 }
-
 .latest-profiles-img {
   width: 40px;
   height: 40px;
 }
-
 .form-control::placeholder {
   color: #bbb !important;
 }
-
 .custom-file {
   margin-bottom: 40px;
 }
-
 .custom-file-label {
   color: #bbb !important;
 }
-
 .logo {
   font-family: "Lilita One", cursive;
 }
-
 .logo:hover,
 .nav-link:hover {
   color: #c8d6e5 !important;
 }
-
 .display-4 {
   color: #222f3e;
 }
-
 .rounded-bg {
   width: 100%;
   background-color: white;
 }
-
 .rounded-circle {
   width: 100%;
 }
-
 th {
   border-top: 1px solid #222f3e !important;
   border-bottom: 2px solid #222f3e !important;
-  /* background-color: #48dbfb; */
   background-color: #1dd1a17e;
 }
-
 .btn {
   box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.1) !important;
 }

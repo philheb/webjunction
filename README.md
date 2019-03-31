@@ -6,6 +6,10 @@ A social Media for Web Developers
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+## Demo
+
+You can find a working DEMO on Heroku @ https://www.webjunction.dev
+
 ### Installing
 
 Installing the dependencies
@@ -13,13 +17,13 @@ Installing the dependencies
 Server (Node)
 
 ```
-root $  npm install
+npm install
 ```
 
 Client (React)
 
 ```
-root $  npm run client-install
+npm run client-install
 ```
 
 ### Running
@@ -29,5 +33,5 @@ To run on your local host
 This will concurrently start the React and the Node servers
 
 ```
-root $  npm run dev
+npm run dev
 ```

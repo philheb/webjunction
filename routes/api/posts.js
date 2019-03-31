@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const mongoose = require('mongoose')
 const passport = require('passport')
 
 // Load models
@@ -86,7 +85,7 @@ router.post('/like/:id', passport.authenticate('jwt', { session: false }), (req,
 })
 
 // #Route   POST api/posts/unlike/:id
-// #Desc    Unike post
+// #Desc    Unlike post
 // #Access  Private
 router.post('/unlike/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
   Profile.findOne({ user: req.user.id }).then(() => {
